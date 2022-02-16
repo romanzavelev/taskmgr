@@ -1,5 +1,6 @@
 package org.example.taskmgr;
 
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,5 +14,6 @@ public class GreetingController {
         model.addAttribute("name", name);
         return "greeting";
     }
+
 }
 
