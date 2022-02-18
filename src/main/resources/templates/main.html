@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>table th, table td {padding: 5px;}</style>
+</head>
+<body>
+<h1> Список задач</h1>
+<p th:text="'Ну здрасьте, ' + ${name} + '! Принесла же Вас нелегкая'" />
+<table border="1">
+    <tr>
+        <th>content</th>
+        <th>author</th>
+        <th>index</th>
+        <th>count</th>
+        <th>size</th>
+        <th>even</th>
+        <th>odd</th>
+        <th>first</th>
+        <th>last</th>
+    </tr>
+    <tr th:each="task, state : ${tasks}">
+        <td th:utext="${task.author}">Flower Name</td>
+        <td th:utext="${task.content}">Flower Name</td>
+        <td th:utext="${state.index}">index</td>
+        <td th:utext="${state.count}">count</td>
+        <td th:utext="${state.size}">size</td>
+        <td th:utext="${state.even}">even</td>
+        <td th:utext="${state.odd}">odd</td>
+        <td th:utext="${state.first}">first</td>
+        <td th:utext="${state.last}">last</td>
+    </tr>
+</table>
+</body>
+</html>

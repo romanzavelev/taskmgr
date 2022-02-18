@@ -1,4 +1,4 @@
-package org.example.model;
+package com.expert1c.taskmgr.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,21 +6,28 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity // This tells Hibernate to make a table out of this class
-public class task {
+public class Task {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
 
-    private String Content;
+    private String content;
+
+    public Task() { }
+
+    public Task(String content, String author) {
+        this.content = content;
+        this.author = author;
+    }
 
     private String author;
 
     public String getContent() {
-        return Content;
+        return content;
     }
 
     public void setContent(String content) {
-        Content = content;
+        content = content;
     }
 
     public Integer getId() {
@@ -37,5 +44,14 @@ public class task {
 
     public void setAuthor(String author) {
         this.author = author;
+    }
+
+    @Override
+    public String toString() {
+        return "task{" +
+                "id=" + id +
+                ", content='" + content + '\'' +
+                ", author='" + author + '\'' +
+                '}';
     }
 }
