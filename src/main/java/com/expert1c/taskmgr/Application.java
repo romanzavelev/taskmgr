@@ -19,20 +19,20 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
-    @Bean
+    /*@Bean
     public CommandLineRunner demo(TaskRepository repository) {
-        return (args) -> {
+        return (args) -> {*/
             // save a few customers
-            repository.save(new Task("Помогите", "Bauer"));
+         /*   repository.save(new Task("Помогите", "Bauer"));
             repository.save(new Task("Не работает", "Brian"));
             repository.save(new Task("Все пропало. Срочно", "Bauer"));
             repository.save(new Task("Нет прав. что делать. Как быть куда обратится", "Palmer"));
             repository.save(new Task("Обновите программу. Ничего не работает", "Dessler"));
 
-            for (Task customer : repository.findAll()) {
+           for (Task customer : repository.findAll()) {
                 System.out.println(customer.toString());
                 log.info(customer.toString());
-            }
+           */
 
             // fetch an individual customer by ID
           // Task task = repository.findById();
@@ -42,8 +42,8 @@ public class Application {
         //log.info("");
 
             // fetch customers by last name
-           log.info("Customer found with findByLastName('Bauer'):");
-           log.info("--------------------------------------------");
+        /*   log.info("Customer found with findByLastName('Bauer'):");
+           log.info("--------------------------------------------");*/
            //repository.findByLastName("Bauer").forEach(bauer -> {
             //    log.info(bauer.toString());
           // });
@@ -51,6 +51,6 @@ public class Application {
             //  log.info(bauer.toString());
             // }
           //  log.info("");
-        };
-    }
+      //  };
+   // }
 }
