@@ -16,6 +16,7 @@
 <p th:text="'Ну здрасьте, ' + ${name} + '! Принесла же Вас нелегкая'" />
 <table border="2">
     <tr>
+        <th>topic</th>
         <th>content</th>
         <th>author</th>
         <th>index</th>
@@ -27,6 +28,7 @@
         <th>last</th>
     </tr>
     <tr th:each="task, state : ${tasks}">
+        <td th:utext="${task.topic}">Flower Name</td>
         <td th:utext="${task.author}">Flower Name</td>
         <td th:utext="${task.content}">Flower Name</td>
         <td th:utext="${state.index}">index</td>

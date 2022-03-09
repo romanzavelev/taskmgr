@@ -13,11 +13,14 @@ public class Task {
 
     private String content;
 
+    private String topic;
+
     public Task() { }
 
-    public Task(String content, String author) {
+    public Task(String content, String author, String topic) {
         this.content = content;
         this.author = author;
+        this.topic = topic;
     }
 
     private String author;
@@ -26,8 +29,16 @@ public class Task {
         return content;
     }
 
+    public String getTopic() {
+        return topic;
+    }
+
+    public void setTopic(String topic) {
+        this.topic = topic;
+    }
+
     public void setContent(String content) {
-        content = content;
+        this.content = content;
     }
 
     public Integer getId() {

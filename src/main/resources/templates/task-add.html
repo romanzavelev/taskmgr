@@ -8,17 +8,13 @@
 </head>
 <body>
 <header th:insert = "blocks/header :: header"></header>
-<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-    <h1 class="display-4 fw-normal">Pricing</h1>
-    <p class="fs-5 text-muted">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>
-</div>
 
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
     <h1>Добавление задачи</h1>
-    <form action="/task/add" method="post"></form>
-    <textarea name="content" placeholder="Введите содержание задачи" class="form-control"></textarea>
-    <input type="text" name="author" placeholder="Введите автора" class="form-control">
-    <input type="text" name="content" placeholder="Введите содержание задачи" class="form-control">
+    <form action="/task-add" method="post"></form>
+    <input type="text" name="topic" placeholder="Введите тему задачи 1" class="form-control"><br>
+    <textarea name="content" placeholder="Введите содержание задачи" class="form-control"></textarea><br>
+    <input type="text" name="author" placeholder="Введите автора" class="form-control"><br>
     <button type="submit" class="btn btn-success">Добавить задачу</button>
 </div>
 
