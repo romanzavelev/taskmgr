@@ -36,15 +36,18 @@ public class GreetingController {
 
     @GetMapping("/listTasks/task-add")
     public String taskAdd(Model model) {
+        System.out.println("task-add");
         return "task-add";
     }
 
-    @PostMapping("/task-add")
+    @PostMapping("/listTasks/task-add")
     public String taskPostAdd(@RequestParam String content, @RequestParam String author, @RequestParam String topic, Model model) {
+        System.out.println("PostMapping");
         Task newTask = new Task(content,author,topic);
         taskRepository.save(newTask);
         return "redirect:/listTasks";
     }
 
 }
+
 

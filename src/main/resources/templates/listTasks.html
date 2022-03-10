@@ -29,8 +29,8 @@
     </tr>
     <tr th:each="task, state : ${tasks}">
         <td th:utext="${task.topic}">Flower Name</td>
-        <td th:utext="${task.author}">Flower Name</td>
         <td th:utext="${task.content}">Flower Name</td>
+        <td th:utext="${task.author}">Flower Name</td>
         <td th:utext="${state.index}">index</td>
         <td th:utext="${state.count}">count</td>
         <td th:utext="${state.size}">size</td>

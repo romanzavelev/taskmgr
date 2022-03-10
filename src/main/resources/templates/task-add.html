@@ -11,11 +11,12 @@
 
 <div class="container mt-5 mb-5">
     <h1>Добавление задачи</h1>
-    <form action="/task-add" method="post"></form>
-    <input type="text" name="topic" placeholder="Введите тему задачи 1" class="form-control"><br>
-    <textarea name="content" placeholder="Введите содержание задачи" class="form-control"></textarea><br>
-    <input type="text" name="author" placeholder="Введите автора" class="form-control"><br>
-    <button type="submit" class="btn btn-success">Добавить задачу</button>
+    <form action="/listTasks/task-add" method="post">
+        <input type="text" name="topic" placeholder="Введите тему задачи" class="form-control"><br>
+        <textarea name="content" placeholder="Введите содержание задачи" class="form-control"></textarea><br>
+        <input type="text" name="author" placeholder="Введите автора задачи" class="form-control"><br>
+        <button type="submit" class="btn btn-success">Добавить задачу</button>
+    </form>
 </div>
 
 <footer th:insert = "blocks/footer :: footer"></footer>
