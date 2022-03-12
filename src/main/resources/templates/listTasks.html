@@ -8,12 +8,7 @@
 </head>
 <body>
 <header th:insert = "blocks/header :: header"></header>
-<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-    <h1 class="display-4 fw-normal">Pricing</h1>
-    <p class="fs-5 text-muted">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>
-</div>
 <h1> Список задач</h1>
-<p th:text="'Ну здрасьте, ' + ${name} + '! Принесла же Вас нелегкая'" />
 <table border="2">
     <tr>
         <th>topic</th>
@@ -25,7 +20,6 @@
         <th>even</th>
         <th>odd</th>
         <th>first</th>
-        <th>last</th>
     </tr>
     <tr th:each="task, state : ${tasks}">
         <td th:utext="${task.topic}">Flower Name</td>
@@ -37,7 +31,6 @@
         <td th:utext="${state.even}">even</td>
         <td th:utext="${state.odd}">odd</td>
         <td th:utext="${state.first}">first</td>
-        <td th:utext="${state.last}">last</td>
         <td th:href="'/task/' + ${state.index}">Детальнее</td>
     </tr>
 </table>
