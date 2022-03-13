@@ -33,6 +33,7 @@ public class GreetingController {
         PageRequest pageable = PageRequest.of(page,4);
         Iterable<Task> tasks = taskRepository.findAll(pageable);
         model.addAttribute("tasks", tasks);
+        model.addAttribute("CurrentPage", page);
         return "listTasks";
     }
 
