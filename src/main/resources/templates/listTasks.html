@@ -29,11 +29,11 @@
                     <td th:utext="${task.topic}">Flower Name</td>
                     <td th:utext="${task.content}">Flower Name</td>
                     <td th:utext="${task.author}">Flower Name</td>
-                    <td> <a href="" class="btn btn-primary eBtn">Edit</a> </td>
+                    <td> <a th:href = "@{findOne/(id=${task.id})}" class="btn btn-primary eBtn">Edit</a> </td>
                 </tr>
                 </tbody>
             </table>
-            <hr/>
+
             <ul class="nav nav-pills">
                 <li class="nav-item" th:each="i : ${#numbers.sequence(0,tasks.totalPages-1)}">
                     <a th:href="@{/listTasks/(page=${i})}" th:text="${i}" class="nav-link"

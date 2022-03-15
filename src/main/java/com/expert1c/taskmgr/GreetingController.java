@@ -69,6 +69,11 @@ public class GreetingController {
         taskRepository.findById(id);
         return "";
     }
+
+    @GetMapping("/listTasks/modal")
+    public String testModal(Task task) {
+        return "modal";
+    }
 }
 
 
