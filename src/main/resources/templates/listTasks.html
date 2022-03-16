@@ -12,6 +12,7 @@
 <body>
 <header th:insert="blocks/header :: header"></header>
 <div class="container">
+    <button class="btn btn-success nBtn">New</button>
     <div class="card">
         <div class="card-body">
             <table class="table table-hover">
@@ -29,7 +30,7 @@
                     <td th:utext="${task.topic}">Flower Name</td>
                     <td th:utext="${task.content}">Flower Name</td>
                     <td th:utext="${task.author}">Flower Name</td>
-                    <td> <a th:href = "@{findOne/(id=${task.id})}" class="btn btn-primary eBtn">Edit</a> </td>
+                    <td> <a th:href = "@{/listTasks/findOne/(id=${task.id})}" class="btn btn-primary eBtn">Edit</a> </td>
                 </tr>
                 </tbody>
             </table>
@@ -61,8 +62,12 @@
                                 <input type="text" class="form-control" id="id" name="id" value=""/>
                             </div>
                             <div class="mb-3">
+                                <label for="author" class="col-form-label">Author:</label>
+                                <input type="text" class="form-control" id="author" name="author" value=""/>
+                            </div>
+                            <div class="mb-3">
                                 <label for="topic" class="col-form-label">Topic:</label>
-                                <input type="text" class="form-control" id="topic" name="id" value=""/>
+                                <input type="text" class="form-control" id="topic" name="topic" value=""/>
                             </div>
                             <div class="mb-3">
                                 <label for="content" class="col-form-label">Content:</label>

@@ -6,12 +6,13 @@ import com.expert1c.taskmgr.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Repository;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.Optional;
 
 @Controller
 public class GreetingController {
@@ -65,15 +66,10 @@ public class GreetingController {
 
     @GetMapping("/listTasks/findOne")
     @ResponseBody
-    public String findOne(int id) {
-        taskRepository.findById(id);
-        return "";
+    public Optional<Task> findOne(int id) {
+        return taskRepository.findById(id);
     }
 
-    @GetMapping("/listTasks/modal")
-    public String testModal(Task task) {
-        return "modal";
-    }
 }
 
 
