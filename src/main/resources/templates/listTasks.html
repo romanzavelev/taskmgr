@@ -46,7 +46,7 @@
     </div>
 
     <div class="myForm">
-        <form th:action="@{/listTasks/save}" method="post">
+        <form th:action="@{/listTasks/save/(page=${CurrentPage})}" method="post">
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                  aria-hidden="true">
                 <div class="modal-dialog">

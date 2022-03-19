@@ -53,9 +53,9 @@ public class GreetingController {
     }
 
     @PostMapping("/listTasks/save")
-    public String save(Task t) {
+    public String save(@RequestParam("page") String page, Task t) {
         taskRepository.save(t);
-        return "redirect:/listTasks";
+        return "redirect:/listTasks?page=" + page;
     }
 
     @GetMapping("/listTasks/delete")
